@@ -26,6 +26,8 @@ import AchievementScreen from './screens/AchievementsScreen';
 //   );
 // }
 
+
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -40,3 +42,4 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
