@@ -39,6 +39,8 @@ function HomeScreen() {
             <Text style={styles.italic2}>"Your body hears everything your mind says." - Unknown</Text>
             <View style={styles.space} />
             <View style={styles.space} />
+            <View style={styles.space} />
+            <View style={styles.space} />
             <TouchableOpacity>
                 <Icon name="bars" size={80} color="#ed7d8a" />
             </TouchableOpacity>
@@ -64,20 +66,24 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontSize: 20,
         fontWeight: 'bold',
+        fontFamily: "Roboto"
     },
 
     italic: {
         fontStyle: 'italic',
+        fontFamily: "Roboto"
     },
     
     italic2: {
         fontStyle: 'italic',
         fontSize: 18,
         textAlign: 'center',
+        fontFamily: "Roboto",
     },
 
     profileDate:{
         marginTop: 10,
+        fontFamily: "Roboto",
         fontSize: 18,
     },
     space: {

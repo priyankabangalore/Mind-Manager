@@ -48,18 +48,19 @@ export default ResourcesScreen;
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    //backgroundColor: "#C7CEF4",
   },
   headline: {
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 25,
     margin: 30,
+    fontFamily: "Roboto"
   },
   title: {
     textAlign: 'center',
     fontSize: 19,
     backgroundColor: "#D1A69B",
+    fontFamily: "Roboto"
   },
   space: {
     width: 20,
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     fontSize: 16,
     textAlign: 'center',
+    fontFamily: "Roboto"
   },
   gradient:{
     height: '100%',

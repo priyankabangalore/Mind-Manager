@@ -6,7 +6,7 @@ function AchievementScreen() {
   return (
     <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
       <View>
-          <Text></Text>
+      <Text style={styles.headline}>Achievements</Text>
       </View>
     </LinearGradient>
   );
@@ -19,6 +19,13 @@ const styles = StyleSheet.create({
   gradient:{
         height: '100%',
         width:'100%',
-  }
+  },
+  headline: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 25,
+    margin: 30,
+    fontFamily: "Roboto"
+  },
 
 });

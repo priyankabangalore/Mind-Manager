@@ -9,24 +9,30 @@ function OverviewScreen() {
         <View style={styles.background}>
             <View style={styles.backgroundLayer1} >
                 <Text style={styles.title}>
-                    Overview
+                    Overview of Today
                 </Text>
             </View>
 
             <View style={styles.backgroundLayer2} >
                 <View style={styles.categories}>
                     <Text style={styles.category}>
-                        Mood:
-                        <TouchableOpacity style={styles.iconFormat}>
-                            <Icon name="laugh-beam" size={40} color="#9fce68" />
-                        </TouchableOpacity>
+                        Overall mood:
                     </Text>
                     
                     <Text style={styles.category}>
-                        Water:
+                        Water intake:
                     </Text>
+
                     <Text style={styles.category} >
-                        Exercise:
+                        Amount of exercise:
+                    </Text>
+
+                    <Text style={styles.category} >
+                        Tasks:
+                    </Text>
+
+                    <Text style={styles.category} >
+                        Notes:
                     </Text>
                 </View>
             </View>
@@ -44,25 +50,22 @@ const styles = StyleSheet.create({
     },
     backgroundLayer1:{
         flex:1,
-        //backgroundColor: "#C7CEF4",
         alignItems: 'center',
     },
     backgroundLayer2:{
-        flex:8,
-        //backgroundColor: "#DCA3C2"
-        
+        flex:8,     
     },
     title:{
-        fontSize: 35,
+        fontSize: 25,
         fontWeight: 'bold',
-        marginTop: 15,
+        marginTop: 30,
     },
     categories:{
         marginTop: 30,
         left:30,
     },
     category:{
-        fontSize: 30,
+        fontSize: 19,
         marginBottom: 10,
     },
     iconFormat:{
