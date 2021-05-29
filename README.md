@@ -1,5 +1,17 @@
 # Mind Manager
 
-An app for mental health awareness, includes daily habit, mood, and diary entry management features. Developed using React-Native for HackOn 2.0 2021.
+## Event
+HackOn 2.0 2021
 
-Created by: Sashintha Tennakoon and Priyanka Bangalore
+## Description
+An app for mental health awareness. Includes daily habit, mood, and diary entry management features. 
+
+## Built With
+* React-Native - Framework
+* Git - Version Control
+* Android Studio - Testing
+* Visual Studio Code - IDE
+
+## Authors
+* Sashintha Tennakoon
+* Priyanka Bangalore
