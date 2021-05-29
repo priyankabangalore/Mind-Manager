@@ -6,7 +6,7 @@ function AchievementScreen() {
   return (
     <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
       <View>
-          <Text>Achievement</Text>
+          <Text></Text>
       </View>
     </LinearGradient>
   );

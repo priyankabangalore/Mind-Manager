@@ -24,25 +24,25 @@ function HomeScreen() {
   return (
     <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
         <View style={styles.background}>
-                 <View style={{alignItems: 'center'}}>
-                 <View style={styles.space} />
-                 <View style={styles.space} />
-                 <View style={styles.space} />
-                    <Image style={styles.profileImage} source ={require('../assets/avatar.png')}/>
-                    <Text style={styles.profileName}> Name</Text>
-                    <Text style={styles.italic}> She/Her</Text>
-                    <Text style={styles.profileDate}>{currentDate} </Text>
+            <View style={{alignItems: 'center'}}>
+            <View style={styles.space} />
+            <View style={styles.space} />
+            <View style={styles.space} />
+            <Image style={styles.profileImage} source ={require('../assets/avatar.png')}/>
+            <Text style={styles.profileName}> Name</Text>
+            <Text style={styles.italic}> She/Her</Text>
+            <Text style={styles.profileDate}>{currentDate} </Text>
 
-                    <View style={styles.space} />
-                        <View style={styles.space} />
-                        <View style={styles.space} />
-                        <Text style={styles.italic2}>"Your body hears everything your mind says." - Unknown</Text>
-                        <View style={styles.space} />
-                        <View style={styles.space} />
-                        <TouchableOpacity>
-                            <Icon name="bars" size={80} color="#ed7d8a" />
-                        </TouchableOpacity>
-                </View>
+            <View style={styles.space} />
+            <View style={styles.space} />
+            <View style={styles.space} />
+            <Text style={styles.italic2}>"Your body hears everything your mind says." - Unknown</Text>
+            <View style={styles.space} />
+            <View style={styles.space} />
+            <TouchableOpacity>
+                <Icon name="bars" size={80} color="#ed7d8a" />
+            </TouchableOpacity>
+        </View>
         </View>
     </LinearGradient>
   );
