@@ -45,7 +45,7 @@ export default function App() {
                 />
               );
             }
-            else if (route.name === 'Achievement') {
+            else if (route.name === 'Achievements') {
               return (
                 <Ionicons
                   name={focused ? 'star' : 'star-outline'}
@@ -72,8 +72,8 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={HomeScreen}/>
         <Tab.Screen name="Check-In" component={CheckInScreen}/>
-        <Tab.Screen name="Overview" component={OverviewScreen}/>
-        <Tab.Screen name="Achievement" component={AchievementScreen}/>
+        {/* <Tab.Screen name="Overview" component={OverviewScreen}/>
+        <Tab.Screen name="Achievements" component={AchievementScreen}/> */}
         <Tab.Screen name="Resources" component={ResourcesScreen}/>
       </Tab.Navigator>
     </NavigationContainer>
