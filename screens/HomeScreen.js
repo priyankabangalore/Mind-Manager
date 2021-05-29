@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableHighlight, TouchableOpacity, SafeAreaView, } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from "react-native-vector-icons/FontAwesome5";
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 
 function HomeScreen() {
@@ -18,37 +21,38 @@ function HomeScreen() {
 
     }, [])
 
-
   return (
-    <View style={styles.background}>
-        <View style={styles.backgroundLayer1} >
+    <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
+        <View style={styles.background}>
+                 <View style={{alignItems: 'center'}}>
+                 <View style={styles.space} />
+                 <View style={styles.space} />
+                 <View style={styles.space} />
+                    <Image style={styles.profileImage} source ={require('../assets/avatar.png')}/>
+                    <Text style={styles.profileName}> Name</Text>
+                    <Text style={styles.italic}> She/Her</Text>
+                    <Text style={styles.profileDate}>{currentDate} </Text>
 
+                    <View style={styles.space} />
+                        <View style={styles.space} />
+                        <View style={styles.space} />
+                        <Text style={styles.italic2}>"Your body hears everything your mind says." - Unknown</Text>
+                        <View style={styles.space} />
+                        <View style={styles.space} />
+                        <TouchableOpacity>
+                            <Icon name="bars" size={80} color="#ed7d8a" />
+                        </TouchableOpacity>
+                </View>
         </View>
-        <View style={styles.backgroundLayer2} >
-            <View style={{alignItems: 'center', marginTop:-110}}>
-                <Image style={styles.profileImage} source ={require('../assets/avatar.png')}/>
-                <Text style={styles.profileName}> Name </Text>
-                <Text style={styles.profileDate}>{currentDate} </Text>
-            </View>
-        </View>
-    </View>
+    </LinearGradient>
   );
 }
 
 export default HomeScreen;
 
-
 const styles = StyleSheet.create({
     background:{
         flex:1,
-    },
-    backgroundLayer1:{
-        flex:1,
-        backgroundColor: "#C7CEF4"
-    },
-    backgroundLayer2:{
-        flex:4,
-        backgroundColor: "#DCA3C2"
     },
     profileImage:{
         width: 175,
@@ -61,10 +65,27 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
     },
+
+    italic: {
+        fontStyle: 'italic',
+    },
+    
+    italic2: {
+        fontStyle: 'italic',
+        fontSize: 18,
+        textAlign: 'center',
+    },
+
     profileDate:{
         marginTop: 10,
         fontSize: 18,
+    },
+    space: {
+        width: 20,
+        height: 20,
+    },
+    gradient:{
+        height: '100%',
+        width:'100%',
     }
-
 });
-
