@@ -2,13 +2,17 @@ import React, {useState, useEffect} from 'react';
 import { View, Text, StyleSheet, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { LinearGradient } from 'expo-linear-gradient';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function CheckInScreen( navigation) {
 
-  const [water, setWater] = useState('10');;
-  const [exercise, setExercise] = useState('50');
-  const [tasks, setTasks] = useState('500');
-  const [sleep, setSleep] = useState('50');
+export default function CheckInScreen({ navigation }) {
+
+  const [water, setWater] = useState(' ');;
+  const [exercise, setExercise] = useState(' ');
+  const [tasks, setTasks] = useState(' ');
+  const [sleep, setSleep] = useState(' ');
+  const [notes, setNotes] = useState(' ');
 
 
   return (
@@ -57,7 +61,7 @@ export default function CheckInScreen( navigation) {
             keyboardType="numeric"
             style={styles.input}
             placeholder='e.g. 2.5'
-            onChangeText={()=> setWater}/>
+            onChangeText={(val)=> setWater(val)}/>
             <Text style={styles.units}>litres</Text>
             </View>
             <View style={styles.space} />
@@ -72,11 +76,10 @@ export default function CheckInScreen( navigation) {
             keyboardType="numeric"
             style={styles.input}
             placeholder='e.g. 3'
-            onChangeText={()=> setExercise()}/>
+            onChangeText={(val)=> setExercise(val)}/>
             <Text style={styles.units}>hours</Text>
           </View>
           <View style={styles.space} />
-
           <Text style={styles.title}>Amount of sleep you got last night:</Text>
           <View style={styles.space} />
           <Icon name="moon" size={30} color="#e9e9e9" />
@@ -87,7 +90,7 @@ export default function CheckInScreen( navigation) {
             keyboardType="numeric"
             style={styles.input}
             placeholder='e.g. 7'
-            onChangeText={()=> setSleep()}/>
+            onChangeText={(val)=> setSleep(val)}/>
             <Text style={styles.units}>hours</Text>
             </View>
             <View style={styles.space} />
@@ -101,7 +104,7 @@ export default function CheckInScreen( navigation) {
             multiline
             style={styles.input2}
             placeholder='e.g. Walked'
-            onChangeText={()=> setTasks()}/>
+            onChangeText={(val)=> setTasks(val)}/>
             <View style={styles.space} />
 
           <Text style={styles.title}>General notes:</Text>
@@ -113,8 +116,24 @@ export default function CheckInScreen( navigation) {
             multiline
             style={styles.input2}
             placeholder='e.g. Self reflection'
-            onChangeText={()=> setTasks()}/>
+            onChangeText={(val)=> setNotes(val)}/>
           </View>
+
+          <Text>
+            Water Drank: {water}
+          </Text>
+          <Text>
+            Exercise Hours: {exercise}
+          </Text>
+          <Text>
+            Sleep Hours: {sleep}
+          </Text>
+          <Text>
+            Today's Activities: {tasks}
+          </Text>
+          <Text>
+            General Notes: {notes}
+          </Text>
 
       </View>
     </LinearGradient>
