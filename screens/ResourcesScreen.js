@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 function ResourcesScreen() {
   return (
-    <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
+    <LinearGradient style= {styles.gradient} colors = {['#9ace9a', '#DCA3C2']}>
       <View style = {styles.background}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <Text style={styles.headline}>Resources</Text>
@@ -35,7 +35,7 @@ function ResourcesScreen() {
             <View style={styles.space} />
             <Text style={styles.lines}>911</Text>
             <View style={styles.space} />
-            <Icon name="rainbow" size={90} color="#D1A69B" />
+            <Icon name="rainbow" size={90} color="#b8dcb8" />
         </View>
       </View>
     </LinearGradient>
@@ -59,7 +59,8 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: 19,
-    backgroundColor: "#D1A69B",
+    backgroundColor: "#b8dcb8",
+    borderRadius: 5,
     fontFamily: "Roboto"
   },
   space: {

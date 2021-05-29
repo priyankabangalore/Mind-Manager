@@ -59,14 +59,17 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         marginTop: 30,
+        fontFamily: "Roboto"
     },
     categories:{
         marginTop: 30,
         left:30,
+        fontFamily: "Roboto"
     },
     category:{
         fontSize: 19,
         marginBottom: 10,
+        fontFamily: "Roboto"
     },
     iconFormat:{
         paddingLeft: 100,

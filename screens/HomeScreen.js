@@ -29,7 +29,7 @@ function HomeScreen() {
             <View style={styles.space} />
             <View style={styles.space} />
             <Image style={styles.profileImage} source ={require('../assets/avatar.png')}/>
-            <Text style={styles.profileName}> Name</Text>
+            <Text style={styles.profileName}> Priyanka</Text>
             <Text style={styles.italic}> She/Her</Text>
             <Text style={styles.profileDate}>{currentDate} </Text>
 
@@ -42,7 +42,7 @@ function HomeScreen() {
             <View style={styles.space} />
             <View style={styles.space} />
             <TouchableOpacity>
-                <Icon name="bars" size={80} color="#ed7d8a" />
+                <Icon name="bars" size={80} color="#ffffff" />
             </TouchableOpacity>
         </View>
         </View>
@@ -61,6 +61,8 @@ const styles = StyleSheet.create({
         height: 175,
         borderRadius: 100,
         alignItems: 'center',
+        borderWidth: 2,
+        borderColor: 'black'
     },
     profileName:{
         marginTop: 20,

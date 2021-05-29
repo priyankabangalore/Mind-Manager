@@ -14,10 +14,24 @@ export default function CheckInScreen({ navigation }) {
   const [sleep, setSleep] = useState(' ');
   const [notes, setNotes] = useState(' ');
 
+  const [currentDate, setCurrentDate] = useState('')
+
+
+    useEffect(() =>{
+        var date = new Date().getDate()
+        var month = new Date().getMonth()
+        var year = new Date().getFullYear()
+
+        setCurrentDate(
+            date + '/' + month + '/' + year
+        )
+
+    }, [])
+
 
   return (
     <ScrollView>
-    <LinearGradient style= {styles.gradient} colors = {['#C7CEF4', '#DCA3C2']}>
+    <LinearGradient style= {styles.gradient} colors = {['#88ade0', '#DCA3C2']}>
       <View style = {styles.background}>
         <Text style={styles.headline}>Daily Check-In</Text>
 
@@ -109,7 +123,7 @@ export default function CheckInScreen({ navigation }) {
 
           <Text style={styles.title}>General notes:</Text>
           <View style={styles.space} />
-          <Icon name="quote-right" size={30} color="#e9e9e9" />
+          <Icon name="quote-right" size={25} color="#e9e9e9" />
           <View style={styles.space} />
 
           <TextInput 
@@ -118,23 +132,69 @@ export default function CheckInScreen({ navigation }) {
             placeholder='e.g. Self reflection'
             onChangeText={(val)=> setNotes(val)}/>
           </View>
+          <View style={styles.space} />
+          <View style={styles.space} />
+          <View style={styles.space} />
 
-          <Text>
-            Water Drank: {water}
-          </Text>
-          <Text>
-            Exercise Hours: {exercise}
-          </Text>
-          <Text>
-            Sleep Hours: {sleep}
-          </Text>
-          <Text>
-            Today's Activities: {tasks}
-          </Text>
-          <Text>
-            General Notes: {notes}
-          </Text>
+          <Text style={styles.headline}>Today's Overview</Text>
+          <View style={{alignItems:'center'}}>
+          <Text style={styles.profileDate}>{currentDate} </Text>
+          <View style={styles.space} />
+          </View>
 
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            Mood: <Text></Text>
+          </Text>
+          
+          <Icon style={{marginTop: -10}} name="laugh-beam" size={40} color="#ffffff" />
+         
+          </View>
+          <View style={styles.space} />
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            Amount of water drank: <Text></Text>
+          </Text>
+          <Text style={styles.overview}>
+             {water} litres
+          </Text>
+          </View>
+          <View style={styles.space} />
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            Hours of exercise: <Text></Text>
+          </Text>
+          <Text style={styles.overview}>
+              {exercise} hours
+          </Text>
+          </View>
+          <View style={styles.space} />
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            Hours slept last night: <Text></Text>
+          </Text>
+          <Text style={styles.overview}>
+              {sleep} hours
+          </Text>
+          </View>
+          <View style={styles.space} />
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            Today's activities: <Text></Text>
+          </Text>
+          <Text style={styles.overview}>
+              {tasks}
+          </Text>
+          </View>
+          <View style={styles.space} />
+          <View style={{ flexDirection:"row"}}>
+          <Text style={styles.overviewtitle}>
+            General notes: <Text></Text>
+          </Text>
+          <Text style={styles.overview}>
+              {notes}
+          </Text>
+          </View>
       </View>
     </LinearGradient>
     </ScrollView>
@@ -150,7 +210,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 18,
     padding: 5,
-    fontFamily: "Roboto"
+    fontFamily: "Roboto",
   },
   headline: {
     textAlign: 'center',
@@ -162,7 +222,8 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: 19,
-    backgroundColor: "#D1A69B",
+    backgroundColor: "#abc5e9",
+    borderRadius: 5,
     fontFamily: "Roboto"
   },
   space: {
@@ -186,6 +247,10 @@ const styles = StyleSheet.create({
     height:150,
     fontFamily: "Roboto"
   },
+  profileDate:{
+    fontFamily: "Roboto",
+    fontSize: 18,
+},
   gradient:{
       height: '100%',
       width:'100%',
@@ -193,5 +258,17 @@ const styles = StyleSheet.create({
   units:{
     margin: 20,
     fontFamily: "Roboto"
-  }
+  },
+  overview: {
+    textAlign: 'center',
+    fontSize: 19,
+    fontFamily: "Roboto"
+  },
+  overviewtitle: {
+    textAlign: 'center',
+    fontSize: 19,
+    fontWeight: 'bold',
+    fontFamily: "Roboto",
+    paddingLeft: '15%',
+  },
 });
