@@ -4,7 +4,7 @@
 HackOn 2.0 2021
 
 ## Description
-An app for mental health awareness. Includes daily habit, mood, and diary entry management features. 
+An app for mental health and wellness monitoring. Includes daily habit, mood, and diary entry management features. 
 
 ## Built With
 * React-Native - Framework
